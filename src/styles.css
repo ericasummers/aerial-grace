@@ -2,3 +2,18 @@
   max-width: 80px;
   border-radius: 50px;
 }
+
+.member-box {
+  cursor: pointer;
+  background-color: teal;
+  border: solid 1px gray;
+}
+
+.member-box:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.member-image img {
+  max-width: 300px;
+}
