@@ -7,22 +7,22 @@
     <h6>Artist Background</h6>
     <p>{{memberToDisplay?.biography}}</p>
     <div *ngIf="memberToDisplay?.fans == 0">
-      <p><span (click)="fanMember()">
-        <a class="waves-effect waves-light btn">
-      <i class="fa fa-heart-o" aria-hidden="true"></i></a></span> 0 fans</p>
+      <p>
+        <a class="waves-effect waves-light btn" (click)="fanMember()">
+      <i class="fa fa-heart-o" aria-hidden="true"></i></a> 0 fans</p>
     </div>
-    <div *ngIf="projectToDisplay?.likes == 1">
-      <p><span (click)="fanMember()" class="fixed-action-btn horizontal">
-        <a class="btn-floating btn-large red">
-      <i class="fa fa-heart" aria-hidden="true"></i></a></span> {{projectToDisplay?.likes}} loving fan</p>
+    <div *ngIf="memberToDisplay?.fans == 1">
+      <p>
+        <a class="waves-effect waves-light btn" (click)="fanMember()">
+      <i class="fa fa-heart" aria-hidden="true"></i></a> {{memberToDisplay?.fans}} loving fan</p>
     </div>
-    <div *ngIf="projectToDisplay?.likes > 1">
-      <p><span (click)="fanMember()" class="fixed-action-btn horizontal">
-        <a class="btn-floating btn-large red">
-      <i class="fa fa-heart" aria-hidden="true"></i></a></span> {{projectToDisplay?.likes}} loving fans</p>
+    <div *ngIf="memberToDisplay?.fans > 1">
+      <p>
+        <a class="waves-effect waves-light btn" (click)="fanMember()">
+      <i class="fa fa-heart" aria-hidden="true"></i></a> {{memberToDisplay?.fans}} loving fans</p>
     </div>
   </div>
-  <div class="col s8 member-image">
+  <div class="col s8">
     <img src="{{memberToDisplay?.fullImage}}">
   </div>
 </div>

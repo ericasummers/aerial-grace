@@ -1,4 +1,3 @@
 export class Member {
-  fans: number = 0;
-  constructor(public name: string, public disciplines: string, public biography: string, public profilePic: string, fullImage: string) { }
+  constructor(public name: string, public disciplines: string, public biography: string, public profilePic: string, public fullImage: string, public fans: number = 0) { }
 }

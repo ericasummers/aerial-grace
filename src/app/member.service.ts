@@ -38,13 +38,13 @@ export class MemberService {
     memberInFirebase.remove();
   }
 
-  fanMember(memberId: string) {
+  addFanMember(memberId: string) {
     var memberInFirebase = this.getMemberById(memberId);
     var newFan = null;
     memberInFirebase.subscribe(dataLastEmittedObserver => {
       newFan = dataLastEmittedObserver.fans
     });
-    newFan = newFan + 1;
+    newFan = parseInt(newFan) + 1;
     memberInFirebase.update({fans: newFan});
   }
 

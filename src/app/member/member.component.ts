@@ -26,15 +26,15 @@ export class MemberComponent implements OnInit {
         dataLastEmittedObserver.name,
         dataLastEmittedObserver.disciplines,
         dataLastEmittedObserver.biography,
-        dataLastEmittedObserver.fans,
         dataLastEmittedObserver.profilePic,
-        dataLastEmittedObserver.fullImage)
+        dataLastEmittedObserver.fullImage,
+        dataLastEmittedObserver.fans)
     });
   }
 
-  likeProject() {
+  fanMember() {
     console.log("fan");
-    this.memberService.fanMember(this.memberId);
+    this.memberService.addFanMember(this.memberId);
   }
 
 }
