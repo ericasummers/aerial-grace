@@ -8,11 +8,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 |Behavior|Output|
 |--------|------|
-|Log meal eaten "Reconstituted vegetables, 400 calories"|Page displays list of meals with "Reconstituted vegetables" added|
-|Browse all meals logged|Page displays full list of all meals logged|
-|User selects to view high-calorie meals only|Page only displays meals with calorie content above 500|
-|User selects to edit meal and makes changes|Page is updated with new values|
-|User selects to delete a logged meal|Meal is removed from full list|
+|Browse all members of Aerial Grace company|Homepage displays full list of all company members|
+|Viewer browses homepage and clicks on company member|Dynamic page displays with details on that individual company member|
+|User selects to view aerial silks performers only|Page only displays members who perform aerial silks|
+|Administrator enters new company member "Shersten Finley, Aerial straps"|Page displays list of members with "Shersten Finley" added, member is added to database|
+|Administrator selects to edit member and makes changes|Page and database is updated with new values|
+|Administrator selects to delete a member who has left the company|Member is removed from full list and database|
 
 ## Installation Instructions
 
