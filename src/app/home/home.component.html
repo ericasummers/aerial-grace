@@ -1,16 +1,20 @@
 <p><strong>Aerial Grace Company Members</strong>:</p>
-<p>Filter by aerial discipline:</p>
-<div class="input-field col s12 m6">
-<select (change)="onDisciplineChange($event.target.value)">
-  <option value="" disabled selected>Choose your option</option>
-  <option value="all">All Disciplines</option>
-  <option value="aerial silks">Aerial Silks</option>
-  <option value="aerial hoop">Aerial Hoop</option>
-  <option value="static trapeze">Static Trapeze</option>
-  <option value="dance trapeze">Dance Trapeze</option>
-  <option value="aerial straps">Aerial Straps</option>
-  <option value="contortion">Contortion</option>
-</select>
+<div class="row">
+  <div class="col s12">
+    Filter By Discipline:
+    <div class="input-field inline">
+      <select (change)="onDisciplineChange($event.target.value)">
+        <option value="" disabled selected>Choose your option</option>
+        <option value="all">All Disciplines</option>
+        <option value="aerial silks">Aerial Silks</option>
+        <option value="aerial hoop">Aerial Hoop</option>
+        <option value="static trapeze">Static Trapeze</option>
+        <option value="dance trapeze">Dance Trapeze</option>
+        <option value="aerial straps">Aerial Straps</option>
+        <option value="contortion">Contortion</option>
+      </select>
+    </div>
+  </div>
 </div>
 <div class="row">
   <div *ngFor="let member of members | async | discipline:filterByDiscipline" (click)="goToMemberPage(member)" class="col member-box">
