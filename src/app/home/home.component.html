@@ -1,3 +1,15 @@
-<p>
-  home works!
-</p>
+<h4><strong>Aerial Grace Company Members</strong>:</h4>
+<!-- <h5>Filter by aerial discipline:</h5>
+<select (change)="onCrewChange($event.target.value)">
+  <option value="all">All Disciplines</option>
+  <option value="silks">Aerial Silks</option>
+  <option value="hoop">Aerial Hoop</option>
+  <option value="straps">Aerial Straps</option>
+  <option value="rope">Aerial Rope</option>
+  <option value="custom">Other apparatus</option>
+</select> -->
+
+<div *ngFor="let member of members | async" class="member-box">
+  <h4><span class="member-name">{{member.name}}</span></h4>
+  <p>{{member.disciplines}}</p>
+</div>
