@@ -1,25 +1,32 @@
 <button class="btn btn-info" (click)="showAddForm()">Add New Artist</button>
 <br><br>
 <div *ngIf="addFormShown" id="add-box">
-  <div>
-    <label for="name">Artist Name:</label>
-    <input #name type="text">
+  <div class="row">
+    <div class="input-field col s6">
+      <label for="name">Artist Name:</label>
+      <input #name type="text">
+    </div>
+    <div class="input-field col s6">
+      <label for="disciplines">Disciplines:</label>
+      <input #disciplines type="text">
+    </div>
   </div>
-  <div>
-    <label for="disciplines">Disciplines:</label>
-    <input #disciplines type="text">
+  <div class="row">
+    <div class="input-field col s12">
+      <label for="biography">Biography:</label>
+      <input #biography type="text">
+    </div>
   </div>
-  <div>
-    <label for="biography">Biography:</label>
-    <input #biography type="text">
-  </div>
-  <div>
-    <label for="profilePic">Profile picture URL:</label>
-    <input #profilePic type="text">
-  </div>
-  <div>
-    <label for="fullImage">Performance Picture URL:</label>
-    <input #fullImage type="text">
+  <div class="row">
+    <div class="input-field col s12">
+      <label for="profilePic">Profile picture URL:</label>
+      <input #profilePic type="text">
+    </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <label for="fullImage">Performance Picture URL:</label>
+      <input #fullImage type="text">
+    </div>
   </div>
   <button (click)="addButtonClicked(name.value, disciplines.value, biography.value, profilePic.value, fullImage.value)" class="btn btn-success">Submit!</button>
   <button (click)="cancelMemberAdd()" class="btn btn-warning">Cancel</button>

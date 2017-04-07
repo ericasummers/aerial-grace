@@ -14,6 +14,7 @@ import { MemberComponent } from './member/member.component';
 import { AdminComponent } from './admin/admin.component';
 import { AddMemberComponent } from './add-member/add-member.component';
 import { EditMemberComponent } from './edit-member/edit-member.component';
+import { DisciplinePipe } from './discipline.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -31,7 +32,8 @@ export const firebaseConfig = {
     MemberComponent,
     AdminComponent,
     AddMemberComponent,
-    EditMemberComponent
+    EditMemberComponent,
+    DisciplinePipe
   ],
   imports: [
     NgbModule.forRoot(),

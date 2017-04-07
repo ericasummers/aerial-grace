@@ -32,6 +32,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * `bower install`
 * `npm install --save @ng-bootstrap/ng-bootstrap`
 * `npm install angularfire2 firebase --save`
+* `npm install angular2-materialize`
 
 ## Development server
 

@@ -1,14 +1,20 @@
-<h5><strong>Aerial Grace Company Members</strong>:</h5>
-<!-- <h5>Filter by aerial discipline:</h5>
-<select (change)="onCrewChange($event.target.value)">
+<p><strong>Aerial Grace Company Members</strong>:</p>
+<p>Filter by aerial discipline:</p>
+<div class="input-field col s12 m6">
+<select (change)="onDisciplineChange($event.target.value)">
+  <option value="" disabled selected>Choose your option</option>
   <option value="all">All Disciplines</option>
-  <option value="silks">Aerial Silks</option>
-  <option value="hoop">Aerial Hoop</option>
-  <option value="straps">Aerial Straps</option>
-  <option value="rope">Aerial Rope</option>
-  <option value="custom">Other apparatus</option>
-</select> -->
-<div *ngFor="let member of members | async" (click)="goToMemberPage(member)" class="member-box">
-  <h4><span class="member-name">{{member.name}}</span></h4>
-  <p>{{member.disciplines}}</p>
+  <option value="aerial silks">Aerial Silks</option>
+  <option value="aerial hoop">Aerial Hoop</option>
+  <option value="static trapeze">Static Trapeze</option>
+  <option value="dance trapeze">Dance Trapeze</option>
+  <option value="aerial straps">Aerial Straps</option>
+  <option value="contortion">Contortion</option>
+</select>
+</div>
+<div class="row">
+  <div *ngFor="let member of members | async | discipline:filterByDiscipline" (click)="goToMemberPage(member)" class="col member-box">
+    <h4><span class="member-name">{{member.name}}</span></h4>
+    <p>{{member.disciplines}}</p>
+  </div>
 </div>
