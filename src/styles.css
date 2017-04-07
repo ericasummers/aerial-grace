@@ -39,6 +39,20 @@ body {
   color: white;
 }
 
+.about {
+  /*text-align: center;*/
+}
+
+.logo {
+  height: 300px;
+  width: 300px;
+  position: relative;
+  border-radius: 200px;
+  display: block;
+  float: left;
+  margin: 15px;
+}
+
 .memberImage {
   max-height: 600px;
   max-width: 700px;
