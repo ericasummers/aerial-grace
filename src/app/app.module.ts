@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
-import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { HomeComponent } from './home/home.component';
@@ -26,7 +26,7 @@ export const firebaseConfig = {
     NavbarComponent
   ],
   imports: [
-    AlertModule.forRoot(),
+    NgbModule.forRoot(),
     BrowserModule,
     FormsModule,
     HttpModule,
