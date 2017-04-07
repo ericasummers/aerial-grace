@@ -1,0 +1,30 @@
+<div *ngFor="let member of members | async">
+  <p><span class="member-name" (click)="editForm.hidden =!editForm.hidden">{{member.name}}</span></p>
+  <p>Disciplines: {{member.disciplines}}</p>
+  <button class="btn btn-warning" (click)="editForm.hidden =!editForm.hidden">Edit</button>
+  <button class="btn btn-danger" (click)="beginDeletingMember(member)">Delete</button>
+  <br><br>
+  <div #editForm [hidden]=editForm>
+    <div>
+      <label for="name">Artist Name:</label>
+      <input [(ngModel)]="member.name">
+    </div>
+    <div>
+      <label for="disciplines">Disciplines:</label>
+      <input [(ngModel)]="member.disciplines">
+    </div>
+    <div>
+      <label for="biography">Biography:</label>
+      <input [(ngModel)]="member.biography">
+    </div>
+    <div>
+      <label for="profilePic">Profile Picture URL:</label>
+      <input [(ngModel)]="member.profilePic">
+    </div>
+    <div class="form-group">
+      <label for="fullImage">Performance Picture URL:</label>
+      <input [(ngModel)]="member.fullImage">
+    </div>
+    <button class="btn btn-success" (click)="editButtonClicked(member)">Update</button>
+  </div>
+</div>

@@ -22,6 +22,22 @@ export class MemberService {
     this.members.push(newMember);
   }
 
+  updateMember(thisMember) {
+    var memberInFirebase = this.getMemberById(thisMember.$key);
+    memberInFirebase.update({
+      name: thisMember.name,
+      disciplines: thisMember.disciplines,
+      biography: thisMember.biography,
+      profilePic: thisMember.profilePic,
+      fullImage: thisMember.fullImage
+    });
+  }
+
+  deleteMember(thisMember) {
+    var memberInFirebase = this.getMemberById(thisMember.$key);
+    memberInFirebase.remove();
+  }
+
   fanMember(memberId: string) {
     var memberInFirebase = this.getMemberById(memberId);
     var newFan = null;

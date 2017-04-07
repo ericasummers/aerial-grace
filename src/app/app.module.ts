@@ -13,6 +13,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MemberComponent } from './member/member.component';
 import { AdminComponent } from './admin/admin.component';
 import { AddMemberComponent } from './add-member/add-member.component';
+import { EditMemberComponent } from './edit-member/edit-member.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -29,7 +30,8 @@ export const firebaseConfig = {
     NavbarComponent,
     MemberComponent,
     AdminComponent,
-    AddMemberComponent
+    AddMemberComponent,
+    EditMemberComponent
   ],
   imports: [
     NgbModule.forRoot(),
