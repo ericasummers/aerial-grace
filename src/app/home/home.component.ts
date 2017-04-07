@@ -21,11 +21,6 @@ export class HomeComponent implements OnInit {
     this.members = this.memberService.getMembers();
     $('select').material_select();
 
-    $('#discipline').on('change', function() {
-      console.log($('#discipline').val());
-      $('#discipline-choice').val($('#discipline').val());
-      $('#myselect').material_select();
-    });
   }
 
   goToMemberPage(clickedMember) {

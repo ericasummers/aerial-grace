@@ -16,9 +16,13 @@ export class AddMemberComponent implements OnInit {
   }
 
   addButtonClicked(name: string, disciplines: string, biography: string, profilePic: string, fullImage: string) {
-    var newMember: Member = new Member(name, disciplines, biography, profilePic, fullImage);
-    this.clickSender.emit(newMember);
-    this.addFormShown = false;
+    if (!name || !disciplines || !biography || !profilePic || !fullImage) {
+      alert("Please complete all fields to add a new company member!");
+    } else {
+      var newMember: Member = new Member(name, disciplines, biography, profilePic, fullImage);
+      this.clickSender.emit(newMember);
+      this.addFormShown = false;
+    }
   }
 
   cancelMemberAdd() {
