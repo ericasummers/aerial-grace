@@ -22,7 +22,7 @@ minLength: 1, // The minimum length of the input for the autocomplete to start. 
   </div>
 </div>
 <div class="row">
-  <div *ngFor="let member of members | async | discipline:filterByDiscipline" (click)="goToMemberPage(member)" class="col member-box">
+  <div *ngFor="let member of members | async | discipline:filterByDiscipline" (click)="goToMemberPage(member)" class="member-box" [style.background-image]="'url(' + member.fullImage + ')'">
     <h4><span class="member-name">{{member.name}}</span></h4>
     <p>{{member.disciplines}}</p>
   </div>

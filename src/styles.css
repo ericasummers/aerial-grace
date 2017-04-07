@@ -1,3 +1,8 @@
+body {
+  background-color: #2A3031;
+  color: white;
+}
+
 .artist-profile {
   max-width: 80px;
   border-radius: 50px;
@@ -7,13 +12,29 @@
   cursor: pointer;
   background-color: teal;
   border: solid 1px gray;
+  margin: 15px;
+  padding: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 30% 20%;
+  opacity: 0.6;
 }
 
 .member-box:hover {
-  color: white;
-  text-decoration: underline;
+  color: #5CCADD;
+  opacity: 1.0;
 }
 
 .member-image img {
   max-width: 300px;
+  position: absolute;
+  opacity: 0.3;
+}
+
+.member-image img:hover {
+  opacity: 0.5;
+}
+
+.nav-wrapper {
+  background-color: #32AAC2;
 }
