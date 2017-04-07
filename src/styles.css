@@ -1,6 +1,7 @@
 body {
   background-color: #2A3031;
   color: white;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .artist-profile {
@@ -33,14 +34,20 @@ body {
 
 .nav-wrapper {
   background-color: #32AAC2;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .fans {
   color: white;
 }
 
-.about {
-  /*text-align: center;*/
+.brand-logo {
+  font-family: 'Pacifico', cursive;
+}
+
+.member-name {
+  font-family: 'Pacifico', cursive;
+  font-size: 150%;
 }
 
 .logo {
