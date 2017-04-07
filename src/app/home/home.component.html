@@ -1,9 +1,26 @@
-<p><strong>Aerial Grace Company Members</strong>:</p>
+<script type="text/javascript">
+$('input.autocomplete').autocomplete({
+data: {
+  "aerial silks": null,
+  "aerial hoop": null,
+  "static trapeze": null
+},
+limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
+// onAutocomplete: function(val) {
+//   // Callback function when value is autcompleted.
+// },
+minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
+});
+</script>
 <div class="row">
   <div class="col s12">
-    Filter By Discipline:
+    Aerial Grace Company Members | Filter By Discipline:
     <div class="input-field inline">
-      <select (change)="onDisciplineChange($event.target.value)">
+      <input type="text" id="autocomplete-input" class="autocomplete" (change)="onChange($event.target.value)">
+      <label for="autocomplete-input">Discipline</label>
+      <!-- <input type="text" id="discipline-choice" (change)="onChange($event.target.value)"> -->
+      <!-- <input type="hidden" id="discipline-choice" (change)="onChange($event.target.value)"> -->
+      <!-- <select id="discipline">
         <option value="" disabled selected>Choose your option</option>
         <option value="all">All Disciplines</option>
         <option value="aerial silks">Aerial Silks</option>
@@ -12,7 +29,8 @@
         <option value="dance trapeze">Dance Trapeze</option>
         <option value="aerial straps">Aerial Straps</option>
         <option value="contortion">Contortion</option>
-      </select>
+        <option value="miscellaneous">Mixed Other</option>
+      </select> -->
     </div>
   </div>
 </div>

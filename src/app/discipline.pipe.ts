@@ -51,6 +51,13 @@ export class DisciplinePipe implements PipeTransform {
         }
       }
       return output;
+    }else if (desiredDiscipline === "miscellaneous") {
+      for (var i = 0; i < input.length; i++) {
+        if (input[i].disciplines !="contortion" && input[i].disciplines !="aerial silks" && input[i].disciplines !="aerial straps" && input[i].disciplines !="dance trapeze" && input[i].disciplines !="static trapeze" && input[i].disciplines !="aerial hoop" && input[i].disciplines !="all") {
+          output.push(input[i]);
+        }
+      }
+      return output;
     } else {
       return input;
     }

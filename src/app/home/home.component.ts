@@ -12,20 +12,29 @@ declare var $: any;
 })
 export class HomeComponent implements OnInit {
   members: FirebaseListObservable<any[]>;
-  filterByDiscipline: string = "discipline";
+  filterByDiscipline: string = "Discipline";
+  disciplineChosen: any;
 
   constructor(private memberService: MemberService, private router: Router) { }
 
   ngOnInit() {
     this.members = this.memberService.getMembers();
     $('select').material_select();
+
+    $('#discipline').on('change', function() {
+      console.log($('#discipline').val());
+      $('#discipline-choice').val($('#discipline').val());
+      $('#myselect').material_select();
+    });
   }
 
   goToMemberPage(clickedMember) {
     this.router.navigate(['member', clickedMember.$key]);
   }
 
-  onDisciplineChange(optionFromMenu) {
-    this.filterByDiscipline = optionFromMenu;
+
+  onChange(optionFromMenu) {
+    this.filterByDiscipline = optionFromMenu.toLowerCase();
   }
+
 }
