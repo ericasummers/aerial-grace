@@ -14,4 +14,18 @@ export class MemberService {
     return this.members;
   }
 
+  getMemberById(memberId: string) {
+    return this.angularFire.database.object('/members/' + memberId);
+  }
+
+  fanMember(memberId: string) {
+    var memberInFirebase = this.getMemberById(memberId);
+    var newFan = null;
+    memberInFirebase.subscribe(dataLastEmittedObserver => {
+      newFan = dataLastEmittedObserver.fans
+    });
+    newFan = newFan + 1;
+    memberInFirebase.update({fans: newFan});
+  }
+
 }
