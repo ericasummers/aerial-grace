@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { routing } from './app.routing';
 import { NavbarComponent } from './navbar/navbar.component';
+import { MemberComponent } from './member/member.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -23,7 +24,8 @@ export const firebaseConfig = {
     AppComponent,
     HomeComponent,
     AboutComponent,
-    NavbarComponent
+    NavbarComponent,
+    MemberComponent
   ],
   imports: [
     NgbModule.forRoot(),
