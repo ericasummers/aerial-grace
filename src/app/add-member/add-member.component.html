@@ -1,5 +1,5 @@
 <br>
-<button class="btn btn-info" (click)="showAddForm()">Add New Artist</button>
+<button class="waves-effect waves-light btn" (click)="showAddForm()">Add New Artist</button>
 <br><br>
 <div *ngIf="addFormShown" id="add-box">
   <div class="row">
@@ -29,6 +29,6 @@
       <input #fullImage type="text">
     </div>
   </div>
-  <button (click)="addButtonClicked(name.value, disciplines.value, biography.value, profilePic.value, fullImage.value)" class="btn btn-success">Submit!</button>
-  <button (click)="cancelMemberAdd()" class="btn btn-warning">Cancel</button>
+  <button (click)="addButtonClicked(name.value, disciplines.value, biography.value, profilePic.value, fullImage.value)" class="waves-effect waves-light btn">Submit!</button>
+  <button (click)="cancelMemberAdd()" class="waves-effect waves-light btn">Cancel</button>
 </div>

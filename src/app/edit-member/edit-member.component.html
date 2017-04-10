@@ -1,8 +1,8 @@
 <div *ngFor="let member of members | async">
   <p><span class="member-name" (click)="editForm.hidden =!editForm.hidden">{{member.name}}</span></p>
   <p>Disciplines: {{member.disciplines}}</p>
-  <button class="btn btn-warning" (click)="editForm.hidden =!editForm.hidden">Edit</button>
-  <button class="btn btn-danger" (click)="beginDeletingMember(member)">Delete</button>
+  <button class="waves-effect waves-light btn" (click)="editForm.hidden =!editForm.hidden">Edit</button>
+  <button class="waves-effect waves-light btn" (click)="beginDeletingMember(member)">Delete</button>
   <br><br>
   <div #editForm [hidden]=editForm>
     <div>
@@ -25,6 +25,6 @@
       <label for="fullImage">Performance Picture URL:</label>
       <input [(ngModel)]="member.fullImage">
     </div>
-    <button class="btn btn-success" (click)="editButtonClicked(member)">Update</button>
+    <button class="waves-effect waves-light btn" (click)="editButtonClicked(member)">Update</button>
   </div>
 </div>

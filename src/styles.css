@@ -1,4 +1,10 @@
-body {
+html {
+  background-color: #2A3031;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.all-content {
   background-color: #2A3031;
   color: white;
   font-family: 'Open Sans', sans-serif;

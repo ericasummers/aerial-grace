@@ -6,12 +6,16 @@
     "Erica Wright <ericaw21@gmail.com>"
   ],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/ericaw21/aerial-grace",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "angular2-build": "^2.0.0-alpha.34",
+    "bootstrap": "^3.3.7"
+  }
 }
