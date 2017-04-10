@@ -4,6 +4,10 @@ This project is a webpage for the Aerial acrobatics and dance company "Aerial Gr
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
+# Website Link
+
+To browse a live version of this project, navigate in your browser (Chrome recommended) to: https://aerial-grace.firebaseapp.com/
+
 ## Behaviors
 
 |Behavior|Output|
