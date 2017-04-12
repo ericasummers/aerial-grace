@@ -37,6 +37,7 @@ To browse a live version of this project, navigate in your browser (Chrome recom
 * `npm install --save @ng-bootstrap/ng-bootstrap`
 * `npm install angularfire2 firebase --save`
 * `npm install angular2-materialize`
+* `npm install materialize-css`
 
 ## Development server
 
